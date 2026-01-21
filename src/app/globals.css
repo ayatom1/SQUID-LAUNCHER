@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
+
+:root {
+  --background: #050505;
+  --foreground: #ededed;
+  --accent: #CC0606;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+  background-color: var(--background);
+  /* Red Grid Background */
+  background-image:
+    linear-gradient(rgba(204, 6, 6, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(204, 6, 6, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  color: var(--foreground);
+  font-family: 'Orbitron', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* Orbitron as primary */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Add a subtle vignette to focus the center */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, transparent 0%, #000 90%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.layout {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 260px;
+  height: 100vh;
+}
+
+.content-area {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 32px;
+  /* Space for TitleBar */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #CC0606;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(204, 6, 6, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(204, 6, 6, 0.6);
+  }
+
+  100% {
+    box-shadow: 0 0 5px rgba(204, 6, 6, 0.2);
+  }
+}

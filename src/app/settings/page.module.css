@@ -1,0 +1,129 @@
+.container {
+    padding: 0 40px 40px 40px;
+    max-width: 800px;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 40px;
+    letter-spacing: -0.5px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.sectionTitle {
+    font-size: 1.2rem;
+    color: #CC0606;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.settingItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.label span:first-child {
+    color: white;
+    font-weight: 500;
+}
+
+.description {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.select {
+    background: #111;
+    color: white;
+    border: 1px solid #333;
+    padding: 8px 16px;
+    border-radius: 8px;
+    outline: none;
+    min-width: 150px;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.options {
+    display: flex;
+    gap: 8px;
+    background: #111;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.optionButton {
+    padding: 6px 16px;
+    border-radius: 6px;
+    border: none;
+    background: transparent;
+    color: #666;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.optionButton.active {
+    background: #222;
+    color: white;
+    font-weight: 600;
+}
+
+.dangerButton {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #330000;
+    background: rgba(204, 6, 6, 0.1);
+    color: #CC0606;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dangerButton:hover {
+    background: #CC0606;
+    color: white;
+    border-color: #CC0606;
+}
+
+.aboutCard {
+    text-align: center;
+    padding: 32px;
+    background: #080808;
+    border-radius: 12px;
+    border: 1px dashed #222;
+}
+
+.aboutCard h3 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.aboutCard p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.copyright {
+    margin-top: 16px;
+    font-family: monospace;
+    color: #444 !important;
+}

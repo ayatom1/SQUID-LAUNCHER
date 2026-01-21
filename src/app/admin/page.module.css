@@ -1,0 +1,223 @@
+.container {
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 32px;
+    text-shadow: 0 0 20px rgba(204, 6, 6, 0.4);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.card {
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+}
+
+.subtitle {
+    color: #CC0606;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.cancelButton {
+    background: transparent;
+    border: 1px solid #333;
+    color: #888;
+    padding: 4px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.8rem;
+}
+
+.cancelButton:hover {
+    color: white;
+    border-color: white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formGroup label {
+    color: #888;
+    font-size: 0.875rem;
+}
+
+.input,
+.select {
+    background: #111;
+    border: 1px solid #222;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    outline: none;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.input:focus,
+.select:focus {
+    border-color: #CC0606;
+}
+
+.helperText {
+    color: #444;
+    font-size: 0.75rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.submitButton {
+    background: #CC0606;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+    transition: all 0.2s;
+    box-shadow: 0 0 10px rgba(204, 6, 6, 0.2);
+}
+
+.submitButton:hover {
+    background: #ff0808;
+    box-shadow: 0 0 20px rgba(204, 6, 6, 0.4);
+}
+
+.gameList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.gameItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background: #111;
+    border-radius: 8px;
+    border: 1px solid #222;
+    transition: all 0.2s;
+}
+
+.hiddenItem {
+    opacity: 0.5;
+    border-style: dashed;
+}
+
+.gameInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.gameThumb,
+.gameThumbPlaceholder {
+    width: 48px;
+    height: 48px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.gameThumbPlaceholder {
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444;
+}
+
+.gameTitle {
+    color: white;
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: flex;
+    gap: 8px;
+}
+
+.hiddenTag {
+    color: #666;
+    font-size: 0.75rem;
+    font-style: italic;
+}
+
+.gameMeta {
+    color: #666;
+    font-size: 0.75rem;
+    margin-top: 4px;
+}
+
+.actions {
+    display: flex;
+    gap: 4px;
+}
+
+.iconButton {
+    background: transparent;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.iconButton:hover {
+    background: #222;
+    color: white;
+}
+
+.delete:hover {
+    background: rgba(204, 6, 6, 0.1);
+    color: #CC0606;
+}
+
+.empty {
+    color: #444;
+    text-align: center;
+    padding: 20px;
+}
