@@ -1,11 +1,13 @@
 {
   "name": "squid-launcher-temp",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "main": "electron/main.js",
+  "repository": "github:ayatom1/SQUID-LAUNCHER",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "dist": "npm run build && electron-builder",
+    "dist": "npm run build && cross-env CSC_IDENTITY_AUTO_DISCOVERY=false npx electron-builder",
     "start": "next start",
     "lint": "eslint"
   },
@@ -44,14 +46,14 @@
     ],
     "win": {
       "target": "nsis",
-      "icon": "public/logo.png"
+      "icon": "public/gc_character.png"
     },
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
       "perMachine": true,
-      "installerIcon": "public/logo.png",
-      "uninstallerIcon": "public/logo.png",
+      "installerIcon": "public/gc_character.png",
+      "uninstallerIcon": "public/gc_character.png",
       "installerSidebar": "build/installerSidebar.png",
       "installerHeader": "build/installerHeader.png",
       "runAfterFinish": true,

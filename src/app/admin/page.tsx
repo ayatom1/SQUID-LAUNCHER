@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useGames, Game } from "@/context/GameContext";
+import { useGames, Game, GameStatus } from "@/context/GameContext";
 import styles from "./page.module.css";
 import { Trash2, Plus, Image as ImageIcon, Eye, EyeOff, Pencil, Save, X } from "lucide-react";
 
@@ -15,7 +15,7 @@ export default function AdminPage() {
         version: "1.0.0",
         downloadUrl: "",
         price: 0,
-        status: "not_installed" as const,
+        status: "not_installed" as GameStatus,
         isVisible: true,
     };
 
@@ -192,7 +192,7 @@ export default function AdminPage() {
                                         </div>
                                     </div>
                                     <div className={styles.actions}>
-                                        <button onClick={() => toggleVisibility(game.id)} className={styles.iconButton} title={game.isVisible ? "Hide" : "Show"}>
+                                        <button onClick={() => toggleVisibility(game.id, game.isVisible)} className={styles.iconButton} title={game.isVisible ? "Hide" : "Show"}>
                                             {game.isVisible ? <Eye size={16} /> : <EyeOff size={16} />}
                                         </button>
                                         <button onClick={() => handleEdit(game)} className={styles.iconButton} title="Edit">
